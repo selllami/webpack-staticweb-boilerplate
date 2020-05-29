@@ -1,9 +1,11 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   //https://webpack.js.org/concepts/#entry
   entry: {
-    index:  './src/assets/js/index.js'
+    index: './src/assets/js/index.js'
   },
 
   //https://webpack.js.org/concepts/#output
@@ -11,7 +13,7 @@ module.exports = {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
-  
+
   //https://webpack.js.org/concepts/#loaders
   module: {
     rules: [
@@ -38,4 +40,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    //https://www.npmjs.com/package/clean-webpack-plugin
+    new CleanWebpackPlugin(),
+    // https://webpack.js.org/plugins/html-webpack-plugin/
+    new HtmlWebpackPlugin({
+      title: 'Output Management',
+    }),
+  ],
 };
