@@ -1,0 +1,14 @@
+{
+  "name": "webpack-staticweb-boilerplate",
+  "version": "1.0.0",
+  "description": "A universal boilerplate for building static web site w/ HTML, CSS, SCSS, Js and more.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Yassine SELLAMI",
+  "license": "ISC"
+}
