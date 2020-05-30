@@ -20,6 +20,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
   },
 
+  //https://webpack.js.org/configuration/dev-server/
+  devServer: {
+    contentBase: './dist',
+  },
+
   //https://webpack.js.org/concepts/#loaders
   module: {
     rules: [
