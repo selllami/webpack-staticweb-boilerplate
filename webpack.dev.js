@@ -3,9 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  //https://webpack.js.org/concepts/#mode
+  mode: 'development',
+
+  devtool: 'inline-source-map',
+
   //https://webpack.js.org/concepts/#entry
   entry: {
-    index: './src/assets/js/index.js'
+    index: './src/assets/js/index.js',
+    aboutus: './src/assets/js/aboutus.js'
   },
 
   //https://webpack.js.org/concepts/#output
@@ -17,6 +23,7 @@ module.exports = {
   //https://webpack.js.org/concepts/#loaders
   module: {
     rules: [
+      // Loading Styles
       {
         test: /\.css$/,
         use: [

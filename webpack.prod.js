@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+  //https://webpack.js.org/concepts/#mode
+  mode: 'production',
+
   //https://webpack.js.org/concepts/#entry
   entry: {
     index:  './src/assets/js/index.js'
