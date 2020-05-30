@@ -11,7 +11,7 @@ module.exports = {
   //https://webpack.js.org/concepts/#entry
   entry: {
     index: './src/assets/js/index.js',
-    aboutus: './src/assets/js/aboutus.js'
+    //aboutus: './src/assets/js/aboutus.js'
   },
 
   //https://webpack.js.org/concepts/#output
@@ -23,6 +23,7 @@ module.exports = {
   //https://webpack.js.org/configuration/dev-server/
   devServer: {
     contentBase: './dist',
+    hot: true,
   },
 
   //https://webpack.js.org/concepts/#loaders

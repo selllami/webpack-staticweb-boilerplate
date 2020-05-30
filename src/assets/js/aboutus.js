@@ -1,1 +1,3 @@
-    cosnole.log('I get called from print.js!');
+export default function aboutus(){
+       console.log('Updating aboutus.js ...');
+   }
