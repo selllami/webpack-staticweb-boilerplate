@@ -11,6 +11,7 @@ module.exports = {
 
   //https://webpack.js.org/concepts/#output
   output: {
+    pathinfo: false,
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },

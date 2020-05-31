@@ -11,19 +11,19 @@ module.exports = {
   //https://webpack.js.org/concepts/#entry
   entry: {
     index: './src/assets/js/index.js',
-    //aboutus: './src/assets/js/aboutus.js'
   },
 
   //https://webpack.js.org/concepts/#output
   output: {
-    filename: '[name].bundle.js',
+    filename: '[name].[contenthash].js',
+    //chunkFilename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
 
   //https://webpack.js.org/configuration/dev-server/
   devServer: {
     contentBase: './dist',
-    hot: true,
+    //hot: true,
   },
 
   //https://webpack.js.org/concepts/#loaders
@@ -53,6 +53,7 @@ module.exports = {
       },
     ],
   },
+  //https://webpack.js.org/concepts/#plugins
   plugins: [
     //https://www.npmjs.com/package/clean-webpack-plugin
     new CleanWebpackPlugin(),
@@ -61,4 +62,20 @@ module.exports = {
       title: 'Output Management',
     }),
   ],
+  optimization: {
+    removeAvailableModules: false,
+    removeEmptyChunks: false,
+    splitChunks: false,
+    // moduleIds: 'hashed',
+    // runtimeChunk: 'single',
+    // splitChunks: {
+    //   cacheGroups: {
+    //     vendor: {
+    //       test: /[\\/]node_modules[\\/]/,
+    //       name: 'vendors',
+    //       chunks: 'all',
+    //     },
+    //   },
+    // },
+  },
 };

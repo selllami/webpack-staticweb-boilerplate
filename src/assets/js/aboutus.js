@@ -1,3 +1,3 @@
-export default function aboutus(){
-       console.log('Updating aboutus.js ...');
-   }
+export default function print(text) {
+  console.log(text);
+};
