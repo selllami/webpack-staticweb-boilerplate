@@ -1,2 +1,2 @@
-require('./index.css');
+require('./index.scss');
 console.log("HELLO from index!");

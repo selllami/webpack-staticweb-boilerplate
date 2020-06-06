@@ -46,13 +46,19 @@ module.exports = {
         rules: [
             // Loading Styles
             {
-                test: /\.css$/,
+                test: /\.(sa|sc|c)ss$/,
                 use: [
                     // fallback to style-loader in development
                     process.env.NODE_ENV !== 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
-                    'style-loader',
                     'css-loader',
-                ],
+                    'postcss-loader',
+                    {
+                        loader: "sass-loader",
+                        options: {
+                            implementation: require("sass")
+                        }
+                    }
+                ]
             },
             // Loading Images
             {
